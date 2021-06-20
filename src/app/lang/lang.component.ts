@@ -32,12 +32,8 @@ export class LangComponent implements OnInit {
   }
 
   capitalFinder(): void {
-
     this.apiHttp.langFind(this.capitalName).subscribe(
       r => this.datas = r,
     );
-
-
   }
-
 }

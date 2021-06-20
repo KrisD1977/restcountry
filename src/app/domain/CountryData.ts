@@ -1,6 +1,6 @@
-import {Currency} from "./Currency";
-import {Language} from "./Language";
-import {TopLevelDomain} from "./TopLevelDomain";
+import {Currency} from './Currency';
+import {Language} from './Language';
+import {TopLevelDomain} from './TopLevelDomain';
 
 export class CountryData {
   name: string;
@@ -14,6 +14,7 @@ export class CountryData {
   currencies: Currency [];
   languages: Language [];
   topLevelDomain: TopLevelDomain [];
+  alpha3Code: string;
 
 
 

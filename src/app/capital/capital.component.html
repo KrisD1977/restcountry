@@ -54,11 +54,22 @@
 
       <h6 class="uk-margin-remove">DOMENY</h6>
       <a class="uk-link-text" *ngFor="let d of r.topLevelDomain">
-        Oznaczenie: "{{d}}"</a>
+        Oznaczenie: "{{d}}" || kod: {{r.alpha2Code}}</a>
 
-      <h6 class="uk-margin-remove">Granice: </h6>
-      <a  class="uk-link-text" *ngFor="let b of r.borders">
-        {{b}}}</a>
+     <!-- <div class="uk-margin">
+        <button (click)="covidFinder()" class="uk-button uk-button-primary uk-border-rounded uk-align-left uk-margin-remove-bottom">COVID</button>
+      </div>
+
+      <h6 class="uk-margin-remove">COVID</h6>
+      <a class="uk-link-text" *ngFor="let cd of cd.confirmed">
+        Nazwa języka: {{cd.deaths}}</a>-->
+
+
+     <!-- <h6 class="uk-margin-remove">Granice: </h6>
+      <a   class="uk-link-text" *ngFor="let border of r.borders " >
+        <a (click)="capitalFinder()"  class="uk-link-text">
+          <span (click)="r = this.data" class="uk-icon-button uk-margin-small-right" uk-icon="world"></span>{{border}}</a>
+        </a>-->
 
 
 
