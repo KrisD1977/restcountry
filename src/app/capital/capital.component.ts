@@ -13,7 +13,6 @@ import {TopLevelDomain} from "../domain/TopLevelDomain";
   styleUrls: ['./capital.component.css']
 })
 export class CapitalComponent implements OnInit {
- /* countrydatas: CountryData[] = [];*/
 
   capitalName: string;
   datas: CountryData[] = [];
@@ -24,6 +23,7 @@ export class CapitalComponent implements OnInit {
   l: Language;
   topLevelDomain: TopLevelDomain[] = [];
   d: TopLevelDomain;
+  borders: string[];
 
   constructor(private apiHttp: ApiHttpService, private router: Router) { }
 
@@ -38,7 +38,6 @@ export class CapitalComponent implements OnInit {
         );
 
 
-    /*, this.router.navigate(['/results'])*/
   }
 
 }

@@ -34,9 +34,6 @@ export class NamesComponent implements OnInit {
     this.apiHttp.countryFind(this.capitalName).subscribe(
       r => this.datas = r,
     );
-
-
-    /*, this.router.navigate(['/results'])*/
   }
 
 }

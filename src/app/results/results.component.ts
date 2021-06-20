@@ -35,8 +35,6 @@ export class ResultsComponent implements OnInit {
       r => this.datas = r,
     );
 
-
-    /*, this.router.navigate(['/results'])*/
   }
 
 

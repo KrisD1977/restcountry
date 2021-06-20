@@ -9,7 +9,7 @@ export class CountryData {
   subregion: string;
   population: number;
   area: number;
-  borders: string;
+  borders: string[];
   timezones: string;
   currencies: Currency [];
   languages: Language [];
