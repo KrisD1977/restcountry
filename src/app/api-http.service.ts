@@ -31,4 +31,8 @@ export class ApiHttpService {
   currencyFind(capital: string): Observable<CountryData[]> {
     return this.httpClient.get<CountryData[]>(`${BASE_URL}/currency/${capital}`);
   }
+
+  langFind(capital: string): Observable<CountryData[]> {
+    return this.httpClient.get<CountryData[]>(`${BASE_URL}/lang/${capital}`);
+  }
 }
