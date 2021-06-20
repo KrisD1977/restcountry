@@ -1,0 +1,64 @@
+<div class="uk-container-expand <!--uk-height-viewport--> uk-flex-middle <!--uk-flex uk-flex-center--> <!--uk-background-muted-->">
+  <div class=" uk-flex-middle uk-flex uk-flex-center ">
+    <div class="uk-width-1-3 uk-background-default uk-border-rounded uk-padding">
+      <button routerLink="" class="uk-icon-button" uk-icon="arrow-left"></button>
+      <h2 class="uk-heading-small uk-margin-remove-top">Wpisz nazwę kraju</h2>
+      <div class="uk-form-stacked">
+        <div class="uk-margin">
+          <label>Nazwa</label>
+          <input [(ngModel)]="capitalName" class="uk-input uk-border-rounded" type="text">
+        </div>
+        <div class="uk-margin">
+          <button (click)="capitalFinder()" class="uk-button uk-button-primary uk-border-rounded uk-align-right uk-margin-remove-bottom">Wyślij</button>
+        </div>
+      </div>
+    </div>
+    <div class="uk-width-1-2 uk-height-large  uk-flex-middle uk-flex uk-flex-center ">
+      <ul class="uk-list uk-text-small uk-padding-small  ">
+        <li *ngFor="let data of datas">
+          <a  (click)="r = this.data" class="uk-link-text">
+            <span class="uk-icon-button uk-margin-small-right" uk-icon="world"></span>{{data.name}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="uk-list uk-text-small uk-padding-small uk-form-stacked">
+    <h2 class="uk-flex-center uk-flex uk-flex-middle">Dane szczegółowe</h2>
+    <li class="uk-list uk-text-small uk-padding-small uk-form-stacked">
+      <a class="uk-link-text uk-text-large">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Kraj: {{r.name}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Stolica: {{r.capital}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Kontynent: {{r.region}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Subkontynent: {{r.subregion}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Populacja: {{r.population}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Powierzchnia: {{r.area}} km^2</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Granice: {{r.borders}}</a>
+      <a class="uk-link-text">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->Strefy czasowe: {{r.timezones}}</a>
+      <h6 class="uk-margin-remove">WALUTY </h6>
+      <a class="uk-link-text" *ngFor="let c of r.currencies">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->
+        Kod waluty: {{c.code}} || Nazwa waluty: {{c.name}} || Symbol: {{c.symbol}}</a>
+
+      <h6 class="uk-margin-remove">JĘZYKI</h6>
+      <a class="uk-link-text" *ngFor="let l of r.languages">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->
+        Nazwa języka: {{l.name}} || Nazwa języka natywnie: {{l.nativeName}}</a>
+
+      <h6 class="uk-margin-remove">DOMENY</h6>
+      <a class="uk-link-text" *ngFor="let d of r.topLevelDomain">
+        <!--<div class="uk-icon-button uk-margin-small-right" uk-icon="world"></div>-->
+        Oznaczenie: "{{d}}"</a>
+
+
+
+    </li>
+  </ul>
+</div>
